@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Cadastre seu interesse em voluntariado e faça parte das iniciativas da Conecta Social."
+    />
+    <meta name="theme-color" content="#176b4d" />
+    <title>Cadastro | Conecta Social</title>
+    <link rel="icon" href="assets/img/community.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark" aria-hidden="true">+</span>conecta<span
+            class="brand-accent"
+            >social</span
+          ></a
+        ><button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+          Menu ☰
+        </button>
+        <nav id="menu" class="main-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a
+          ><a href="projetos.html">Projetos sociais</a
+          ><a href="index.html#impacto">Nosso impacto</a
+          ><a href="index.html#contato">Contato</a
+          ><a class="button button-small active" href="cadastro.html"
+            >Quero participar</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <section class="page-hero compact">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Faça parte da rede</p>
+            <h1>Seu próximo passo <span>começa aqui.</span></h1>
+            <p class="lead">
+              Preencha o formulário para registrar seu interesse. Os dados ficam
+              apenas neste navegador, pois esta versão é um protótipo acadêmico.
+            </p>
+          </div>
+          <img
+            src="assets/img/hero.svg"
+            alt="Ilustração de pessoas colaborando em uma iniciativa social"
+            width="640"
+            height="420"
+          />
+        </div>
+      </section>
+      <section class="section soft">
+        <div class="container form-layout">
+          <aside class="form-intro">
+            <p class="eyebrow">Cadastro de interesse</p>
+            <h2>Vamos nos <span>conhecer?</span></h2>
+            <p>
+              Informe seus dados de contato e escolha como gostaria de
+              contribuir. Campos marcados com * são obrigatórios.
+            </p>
+            <div class="privacy-note">
+              <span aria-hidden="true">⌑</span>
+              <div>
+                <strong>Seus dados importam</strong>
+                <p>
+                  Não use dados reais sensíveis nesta demonstração. O formulário
+                  não envia informações a um servidor.
+                </p>
+              </div>
+            </div>
+            <img
+              class="side-image"
+              src="assets/img/community.svg"
+              alt="Pessoas reunidas em uma atividade comunitária"
+              loading="lazy"
+            />
+          </aside>
+          <form class="registration-form" id="registration-form" novalidate>
+            <div class="form-section">
+              <h3><span>01</span> Dados pessoais</h3>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="nome">Nome completo *</label
+                  ><input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    autocomplete="name"
+                    required
+                    minlength="3"
+                    maxlength="100"
+                    placeholder="Digite seu nome completo"
+                  /><small class="field-error" id="nome-error"></small>
+                </div>
+                <div class="field">
+                  <label for="email">E-mail *</label
+                  ><input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    maxlength="120"
+                    placeholder="voce@exemplo.com"
+                  /><small class="field-error" id="email-error"></small>
+                </div>
+                <div class="field">
+                  <label for="cpf">CPF *</label
+                  ><input
+                    id="cpf"
+                    name="cpf"
+                    type="text"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    required
+                    placeholder="000.000.000-00"
+                    maxlength="14"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    title="Digite o CPF no formato 000.000.000-00"
+                  /><small class="hint"
+                    >Use um número fictício válido para testar.</small
+                  ><small class="field-error" id="cpf-error"></small>
+                </div>
+                <div class="field">
+                  <label for="telefone">Telefone *</label
+                  ><input
+                    id="telefone"
+                    name="telefone"
+                    type="tel"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required
+                    placeholder="(11) 99999-9999"
+                    maxlength="15"
+                    pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                    title="Digite um telefone com DDD"
+                  /><small class="field-error" id="telefone-error"></small>
+                </div>
+                <div class="field">
+                  <label for="nascimento">Data de nascimento *</label
+                  ><input
+                    id="nascimento"
+                    name="nascimento"
+                    type="date"
+                    autocomplete="bday"
+                    required
+                  /><small class="field-error" id="nascimento-error"></small>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <h3><span>02</span> Endereço</h3>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="endereco">Endereço *</label
+                  ><input
+                    id="endereco"
+                    name="endereco"
+                    type="text"
+                    autocomplete="street-address"
+                    required
+                    minlength="4"
+                    maxlength="150"
+                    placeholder="Rua, avenida, número e complemento"
+                  /><small class="field-error" id="endereco-error"></small>
+                </div>
+                <div class="field">
+                  <label for="cep">CEP *</label
+                  ><input
+                    id="cep"
+                    name="cep"
+                    type="text"
+                    inputmode="numeric"
+                    autocomplete="postal-code"
+                    required
+                    maxlength="9"
+                    placeholder="00000-000"
+                    pattern="\d{5}-\d{3}"
+                    title="Digite o CEP no formato 00000-000"
+                  /><small class="field-error" id="cep-error"></small>
+                </div>
+                <div class="field">
+                  <label for="cidade">Cidade *</label
+                  ><input
+                    id="cidade"
+                    name="cidade"
+                    type="text"
+                    autocomplete="address-level2"
+                    required
+                    minlength="2"
+                    maxlength="80"
+                    placeholder="Sua cidade"
+                  /><small class="field-error" id="cidade-error"></small>
+                </div>
+                <div class="field">
+                  <label for="estado">Estado *</label
+                  ><select
+                    id="estado"
+                    name="estado"
+                    autocomplete="address-level1"
+                    required
+                  >
+                    <option value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option></select
+                  ><small class="field-error" id="estado-error"></small>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <h3><span>03</span> Como deseja participar?</h3>
+              <fieldset class="choice-fieldset">
+                <legend>Tenho interesse em *</legend>
+                <label class="radio-card"
+                  ><input
+                    type="radio"
+                    name="interesse"
+                    value="voluntariado"
+                    required
+                  /><span
+                    ><strong>Voluntariado</strong
+                    ><small>Doar tempo e habilidades</small></span
+                  ></label
+                ><label class="radio-card"
+                  ><input
+                    type="radio"
+                    name="interesse"
+                    value="doacao"
+                    required
+                  /><span
+                    ><strong>Doações</strong
+                    ><small>Apoiar campanhas e iniciativas</small></span
+                  ></label
+                ><label class="radio-card"
+                  ><input
+                    type="radio"
+                    name="interesse"
+                    value="parceria"
+                    required
+                  /><span
+                    ><strong>Parcerias</strong
+                    ><small>Conectar organizações e ideias</small></span
+                  ></label
+                >
+              </fieldset>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="disponibilidade">Disponibilidade</label
+                  ><select id="disponibilidade" name="disponibilidade">
+                    <option value="">Selecione uma opção</option>
+                    <option>Durante a semana</option>
+                    <option>Finais de semana</option>
+                    <option>Períodos flexíveis</option>
+                    <option>Participação pontual</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="mensagem">Conte um pouco sobre você</label
+                  ><textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="3"
+                    maxlength="500"
+                    placeholder="Habilidades, motivação ou dúvidas (opcional)"
+                  ></textarea>
+                </div>
+              </div>
+              <label class="consent"
+                ><input
+                  id="consentimento"
+                  name="consentimento"
+                  type="checkbox"
+                  required
+                /><span
+                  >Entendo que esta é uma demonstração acadêmica e concordo com
+                  o armazenamento local dos dados fictícios. *</span
+                ></label
+              ><small class="field-error" id="consentimento-error"></small>
+            </div>
+            <div class="form-actions">
+              <button class="button" type="submit">Enviar cadastro →</button
+              ><button class="button quiet" type="reset">
+                Limpar formulário
+              </button>
+            </div>
+            <p
+              id="registration-feedback"
+              class="feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <div class="success" id="registration-success" hidden tabindex="-1">
+              <span>✓</span>
+              <div>
+                <h3>Cadastro demonstrativo concluído!</h3>
+                <p>
+                  Seu interesse foi salvo apenas neste navegador. Nenhum dado
+                  foi enviado à organização.
+                </p>
+                <button class="text-button" id="show-records" type="button">
+                  Ver registros locais
+                </button>
+              </div>
+            </div>
+            <section
+              class="local-records"
+              id="local-records"
+              hidden
+              aria-labelledby="records-title"
+            >
+              <div class="records-heading">
+                <h3 id="records-title">Registros neste navegador</h3>
+                <button type="button" id="clear-records" class="text-button">
+                  Apagar registros
+                </button>
+              </div>
+              <ul id="records-list"></ul>
+              <p class="hint">
+                Dados demonstrativos armazenados no LocalStorage. Não utilize
+                informações pessoais reais.
+              </p>
+            </section>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="index.html"
+          >＋ conecta<span>social</span></a
+        >
+        <p>Conexões reais para mudanças possíveis.</p>
+        <nav aria-label="Links do rodapé">
+          <a href="index.html">Início</a><a href="projetos.html">Projetos</a
+          ><a href="docs/transparencia.html">Transparência</a>
+        </nav>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="year">2026</span> Conecta Social — projeto acadêmico
+          demonstrativo.</span
+        ><a href="docs/transparencia.html">Privacidade</a>
+      </div>
+    </footer>
+  </body>
+</html>
